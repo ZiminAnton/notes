@@ -1,0 +1,8 @@
+%h3 Heeeeey! Here you can see all my posts:
+%table{:border => "0"}
+  %tbody
+    %tr
+      %th Title
+      %th Description
+    %tr
+      = render :partial => "post", :collection => @posts

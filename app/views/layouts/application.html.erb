@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render :template => "navigation/top_navigation" %>
+<%= yield %>
+<%= render :template => "navigation/bottom_navigation" %>
+
+</body>
+</html>

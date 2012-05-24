@@ -1,0 +1,8 @@
+Here you can create your new post:
+= form_for @post do |p|
+  .title Title
+  = p.text_field :title
+  .description Description
+  = p.text_field :description
+  = p.hidden_field :user_id
+  = p.submit

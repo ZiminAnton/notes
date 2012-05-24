@@ -1,0 +1,8 @@
+.top_navigation
+  .links
+    %ol
+    - if user_signed_in?
+      %li= "Hello, #{current_user.first_name || current_user.email}"
+      %li.login= link_to "Sign out", destroy_user_session_path
+    - else
+      %li.login= link_to "Sign in", new_user_session_path
