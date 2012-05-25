@@ -1,0 +1,7 @@
+- if @categories.any?
+  .categories
+- else
+  = "You have no categories"
+
+:javascript
+  $(".categories").treeview();

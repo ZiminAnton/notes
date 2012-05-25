@@ -9,9 +9,12 @@
 <body>
 <%= render :template => "navigation/top_navigation" %>
 <div class="main_container">
-  <div class="left_sidebar total_form_style">
-    Categories:
-  </div>
+  <%- if user_signed_in?%>
+    <div class="left_sidebar total_form_style">
+      Categories:
+      <%= render :template => "categories/display_category_tree" %>
+    </div>
+  <%- end%>
   <div class="central_content total_form_style">
     <%= yield %>
   </div>
