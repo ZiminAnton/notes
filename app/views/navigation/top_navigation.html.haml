@@ -1,8 +1,8 @@
 .top_navigation
-  .links
-    %ol
+  .links.main_container
+    %li.logo= link_to image_tag("notes.png"), root_path
     - if user_signed_in?
-      %li= "Hello, #{current_user.first_name || current_user.email}"
+      %li.simple= "Hello, #{current_user.first_name || current_user.email}"
       %li.login= link_to "Sign out", destroy_user_session_path
     - else
       %li.login= link_to "Sign in", new_user_session_path

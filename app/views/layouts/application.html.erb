@@ -8,7 +8,11 @@
 </head>
 <body>
 <%= render :template => "navigation/top_navigation" %>
-<%= yield %>
+<div class="main_container">
+  <div class="content">
+    <%= yield %>
+  </div>
+</div>
 <%= render :template => "navigation/bottom_navigation" %>
 
 </body>
