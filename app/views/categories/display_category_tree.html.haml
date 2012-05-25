@@ -1,16 +1,28 @@
-%ul#categories
-  %li Первый элемент из основного списка
-  %ul
-    %li 1 qwer
-    %li 2 qwre
-  %li Второй элемент из основного списка
-  %ul
-    %li 1 qwer
-    %li 2 qwer
-  %li Третий элемент из основного списка
-  %ul
-    %li 1 qwer
-    %li 2 qwer
+%ul#categories.filetree
+  %li
+    %span.folder Folder 1
+    %ul
+      %li
+        %span.file Item 1.1
+  %li
+    %span.folder Folder 2
+    %ul
+      %li
+        %span.folder Subfolder 2.1
+        %ul#folder21
+          %li
+            %span.file File 2.1.1
+          %li
+            %span.file File 2.1.2
+      %li
+        %span.file File 2.2
+  %li.closed
+    %span.folder Folder 3 (closed at start)
+    %ul
+      %li
+        %span.file File 3.1
+  %li
+    %span.file File 4
 
 - if @categories.any?
 - else
@@ -18,5 +30,5 @@
 
 :javascript
   $(document).ready(function(){
-    $("ul#categories").treeview({persist: "location", collapsed: true, unique: true});
+    $("ul#categories").treeview();
   })
