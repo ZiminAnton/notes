@@ -14,16 +14,28 @@
 div.main_container {
   width: 690px;
   margin: 0 auto;
+  display: block;
 }
 
-.content {
+.total_form_style {
   border: 1px solid #EEEEEE;
   border-radius: 4px 4px 4px 4px;
   box-shadow: 0 1px 1px #777777;
   color: #333333;
   font-size: 14px;
-  margin: 25px 0 12px;
   padding: 15px 30px;
+}
+
+.central_content {
+  width: 627px;
+  margin: 25px 0 12px;
+  float: right;
+}
+
+.left_sidebar {
+  float: left;
+  width: 150px;
+  margin: 25px 0px 0px -215px;
 }
 
 body {
