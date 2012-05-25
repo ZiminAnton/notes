@@ -1,7 +1,22 @@
+%ul#categories
+  %li Первый элемент из основного списка
+  %ul
+    %li 1 qwer
+    %li 2 qwre
+  %li Второй элемент из основного списка
+  %ul
+    %li 1 qwer
+    %li 2 qwer
+  %li Третий элемент из основного списка
+  %ul
+    %li 1 qwer
+    %li 2 qwer
+
 - if @categories.any?
-  .categories
 - else
   = "You have no categories"
 
 :javascript
-  $(".categories").treeview();
+  $(document).ready(function(){
+    $("ul#categories").treeview({persist: "location", collapsed: true, unique: true});
+  })
