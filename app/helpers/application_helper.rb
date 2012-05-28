@@ -4,8 +4,9 @@ module ApplicationHelper
     return html unless subcategories
     html << "<ul>"
     subcategories.each do |category|
-      html << "<li><span class='folder'>#{category.name}</span></li>"
+      html << "<li><span class='folder'>#{category.name}</span>"
       subcategory_for(category, html)
+      html << "</li>"
     end
     html << "</ul>"
   end
