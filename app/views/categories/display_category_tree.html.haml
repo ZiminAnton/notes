@@ -5,6 +5,7 @@ Categories:
   %ul#categories.filetree
     - top_categories.each do |category|
       %li
+        = check_for_posts(category)
         %span.folder= category.name
         = subcategory_for(category).html_safe
 - else
