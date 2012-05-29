@@ -1,6 +1,6 @@
 = form_for @post do |p|
   .textfield_label.category Category:
-  %span.category_name= @post.category.name || 'Please select category from left sidebar'
+  %span.category_name= @post.category ? @post.category.name : 'Please select category from left sidebar'
   .textfield_label.title Title
   = p.text_field :title
   .textfield_label.description Description
