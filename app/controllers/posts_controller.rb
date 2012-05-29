@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    render :layout => false
   end
 
   def new
@@ -16,6 +17,17 @@ class PostsController < ApplicationController
   def create
     post = Post.create(params[:post])
     redirect_to post_path(post)
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update_attributes(params[:post])
+      redirect_to :action => :index
+    else
+      redirect_to :action => :edit
+    end
   end
 
   private

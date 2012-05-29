@@ -12,7 +12,7 @@
  *= require_tree .
 */
 div.main_container {
-  width: 690px;
+  width: 951px;
   margin: 0 auto;
   display: block;
 }
@@ -23,19 +23,29 @@ div.main_container {
   box-shadow: 0 1px 1px #777777;
   color: #333333;
   font-size: 14px;
-  padding: 15px 30px;
+  padding: 15px 11px;
+  background-color: #F5FFF5;
 }
 
 .central_content {
-  width: 627px;
+  width: auto;
+  min-width: 540px;
+  max-width: 611px;
   margin: 25px 0 12px;
-  float: right;
+  float: left;
 }
 
 .left_sidebar {
   float: left;
-  width: 150px;
-  margin: 25px 0px 0px -215px;
+  width: auto;
+  max-width: 210px;
+  min-width: 150px;
+  margin: 25px 5px 0px 5px;
+}
+.right_sidebar {
+  float: right;
+  width: auto;
+  margin: 25px 0px 0px 5px;
 }
 
 body {
@@ -57,4 +67,32 @@ a:active {
 
 a:hover {
   color: red;
+}
+
+.textfield_label {
+  font-size: 12px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #222222;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.top_title {
+  margin: 0px 0px 10px 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.action_button {
+  margin: 10px 5px 10px 0px;
+}
+
+table th{
+  text-align: center;
+  font-size: 13px;
+  padding: 5px 10px;
+  background-color: white;
+  border-collapse: collapse;
+  border-top: 1px red;
+  border-top-style: inherit;
 }

@@ -6,7 +6,7 @@ Categories:
     - top_categories.each do |category|
       %li
         = check_for_posts(category)
-        %span.folder= category.name
+        %span.folder{:id => "category_#{category.id}"}= category.name
         = subcategory_for(category).html_safe
 - else
   = "You have no categories"
@@ -15,3 +15,16 @@ Categories:
   $(document).ready(function(){
     $("ul#categories").treeview();
   })
+
+  $('span.file').click(function() {
+    var post_id = $(this).attr('id').split('_')[1];
+    $.ajax({
+      url: '/posts/'+ post_id,
+      type: "GET",
+      async: true,
+      success: function(data) {
+        $('.central_content.total_form_style').empty();
+        $('.central_content.total_form_style').append(data);
+      }
+    });
+  });

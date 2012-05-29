@@ -1,0 +1,17 @@
+= form_for @post do |p|
+  .textfield_label.category Category:
+  %span.category_name= @post.category.name || 'Please select category from left sidebar'
+  .textfield_label.title Title
+  = p.text_field :title
+  .textfield_label.description Description
+  = p.text_area :description
+  = p.hidden_field :user_id
+  = p.hidden_field :category_id
+  .submit_buttons
+    = p.submit
+
+:javascript
+  $("span.folder").click(function() {
+    $('span.category_name').text($(this).text());
+    $('#post_category_id').val($(this).attr('id').split('_')[1]);
+  });

@@ -1,3 +1,6 @@
 Here you can see one of my posts:
+.textfield_label Title
 = @post.title
+.textfield_label Description
 = @post.description
+.action_button= link_to 'Edit', edit_post_path(@post)

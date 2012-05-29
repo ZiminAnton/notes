@@ -1,2 +1,4 @@
-%td = link_to post_path(post), post.title
-%td = post.description
+%tr
+  %td= link_to post.title, post_path(post)
+  %td= post.description
+  %td= post.created_at.strftime('%m/%d/%Y')

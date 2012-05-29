@@ -2,7 +2,7 @@
 %table{:border => "0"}
   %tbody
     %tr
-      %th Title
-      %th Description
-    %tr
-      = render :partial => "post", :collection => @posts
+      %th.head_title Title
+      %th.head_title Description
+      %th.head_title Created at
+    = render :partial => "post", :collection => @posts

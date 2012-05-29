@@ -17,6 +17,11 @@
   <div class="central_content total_form_style">
     <%= yield %>
   </div>
+  <%- if user_signed_in?%>
+    <div class="right_sidebar total_form_style">
+        <%= render :template => "layouts/right_sidebar" %>
+    </div>
+  <%- end%>
 </div>
 <%= render :template => "navigation/bottom_navigation" %>
 
