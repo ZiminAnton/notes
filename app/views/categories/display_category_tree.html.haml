@@ -28,3 +28,16 @@ Categories:
       }
     });
   });
+
+  $('span.folder').dblclick(function() {
+    var category_id = $(this).attr('id').split('_')[1];
+    $.ajax({
+      url: '/categories/'+ category_id + '/edit',
+      type: "GET",
+      async: true,
+      success: function(data) {
+        $('.central_content.total_form_style').empty();
+        $('.central_content.total_form_style').append(data);
+      }
+    });
+  });

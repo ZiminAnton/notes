@@ -1,0 +1,16 @@
+= form_for @category do |cat|
+  .textfield_label.category Category:
+  .textfield_label.title Category name
+  = cat.text_field :name
+
+  .textfield_label.category Subcategory:
+  %span.subcategory_id= @category.subcategory_id ? @category.subcategory.name : 'This category on the top, and has not any parent category'
+  = cat.hidden_field :subcategory_id
+  .submit_buttons
+    = cat.submit
+
+:javascript
+  $("span.folder").click(function() {
+    $('span.subcategory_id').text($(this).text());
+    $('#category_subcategory_id').val($(this).attr('id').split('_')[1]);
+  });
