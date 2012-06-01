@@ -19,6 +19,8 @@ module ApplicationHelper
         html << "<li><span class='file' id='post_#{post.id}'>#{post.title}</span></li>"
       end
       html << "</ul>"
+    else
+      ''
     end
   end
 end

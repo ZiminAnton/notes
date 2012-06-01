@@ -7,7 +7,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    render :layout => false
+    respond_to do |format|
+      if request.xhr?
+        format.html {render :layout => false}
+      else
+        format.html
+      end
+    end
   end
 
   def new
